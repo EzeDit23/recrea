@@ -7,3 +7,12 @@ apellido VARCHAR(50),
 direccion VARCHAR(50),
 numero INT(50)
 
+
+CREATE TABLE AVISOS (
+id_aviso INT(6) AUTO_INCREMENT PRIMARY KEY,
+empresa VARCHAR(300) NOT NULL,
+categoria VARCHAR(300) NOT NULL,
+link VARCHAR(50)
+);
+
+

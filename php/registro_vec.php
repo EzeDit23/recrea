@@ -7,7 +7,6 @@
     $numero = $_POST["numero"];
 
     include("conexion.php");
-
     
 	$insertar = "INSERT INTO vecinos
 	(id,email,clave,nombre,apellido,direccion,numero) 
@@ -25,5 +24,4 @@
 	} else {
 		echo "ALgo pasa con el SQL";
 	}
-
 ?>

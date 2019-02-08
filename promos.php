@@ -45,7 +45,7 @@
     echo"<h3>$empresa</h3>";
     ?>
     <a href="" id="btn-espera" style="display: none;">Espere</a>
-    <a href="" id="btn-verPromo" style="display: none;">Continuar</a>
+    <a href="php/descuento_ver.php" id="btn-verPromo" style="display: none;">Continuar</a>
     
     <script type="text/javascript">
     window.reproducir = function() {

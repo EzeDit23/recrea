@@ -1,6 +1,6 @@
 <?php
 
-
+/*DESDE VISUAL*/
 /*TRAEMOS NUMERO ALEATORIO GENERADO*/
 $pagina_anterior=$_SERVER['HTTP_REFERER'];
 $numganador=($_GET['numganador']);
@@ -8,7 +8,7 @@ $code=($_GET['code']);
 $desde_donde = 'http://localhost/recrea/promos.php';
 
 echo "el numero es: $numganador";
-echo "el coidgo es: $code";
+echo "el coidgo es: $code"; 
 
 /*CONSULTAMOS LA BASE DE DATOS*/
 include("php/conexion.php");

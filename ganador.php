@@ -2,10 +2,13 @@
 
 
 /*TRAEMOS NUMERO ALEATORIO GENERADO*/
+$pagina_anterior=$_SERVER['HTTP_REFERER'];
 $numganador=($_GET['numganador']);
+$code=($_GET['code']);
+$desde_donde = 'http://localhost/recrea/promos.php';
 
 echo "el numero es: $numganador";
-
+echo "el coidgo es: $code";
 
 /*CONSULTAMOS LA BASE DE DATOS*/
 include("php/conexion.php");
@@ -18,7 +21,6 @@ $select_queryVec = mysqli_query($conexion, $selectVec);
 //creamos la función
 
 
-
 while($dato = mysqli_fetch_array($select_queryDes)) {
     $id_descuento = $dato['id_descuento'];
     $codigo = $dato['codigo'];
@@ -28,7 +30,7 @@ while($dato = mysqli_fetch_array($select_queryDes)) {
     $categoria = $dato['categoria'];
 
     
-    echo "<h1>$codigo </h1>";
+    echo "<h1>$code </h1>";
     echo "<h1>$nombre </h1>";
     echo "<h2>$porcentaje % de descuento</h2>";
     echo "<h2>$empresa </h2>";
@@ -41,6 +43,7 @@ while($dato = mysqli_fetch_array($select_queryVec)) {
         echo "no tenes mas promos";
     } else {
         echo "te quedan $numero promos mas este mes";
+
     
     }
 

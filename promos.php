@@ -1,6 +1,8 @@
 <?php
  include("php/conexion.php");
- $id_select = 2;
+ $id_select = 1;
+ /*avisos*/
+ 
     
  $select = "SELECT * FROM avisos WHERE id_aviso = $id_select";
  $select_query = mysqli_query($conexion, $select);
@@ -28,7 +30,7 @@
 
 
     
-    <video id="video" width="640" height="480" controls autoplay>
+    <video id="video" width="640" height="480">
         <source src="video/video.mp4" type="video/mp4">
     </video>
     <script>

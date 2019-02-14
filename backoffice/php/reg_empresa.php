@@ -14,15 +14,18 @@
     $instagram = $_POST["instagram"];
     $twitter = $_POST["twitter"];
 
+    include("conexion.php");
+
+
 
     echo "ESTAMSO EN EL ARCHIVO";
 
-    include("conexion.php");
+
 
    $insertar = "INSERT INTO empresas
-    (id_empresa,nombre)
+    (id_empresa,nombre,categoria,status,estado,email,clave,localidad,direccion,numero,comentario,sitioweb,face,instagram,twitter)
     VALUES
-    (1,'$nombre')";
+    (null,'$nombre','$categoria','$status','$estado','$email','$clave','$localidad','$estado','$numero','$comentario','$sitioweb','$facebook','$instagram','$twitter')";
 
 /*
     $insertar = "INSERT INTO empresas
@@ -37,7 +40,7 @@
 
     // 4. Verificar si funcionó
     if($insertar_ej == true){
-        header('Location: gracias.html');
+        echo "bien!";
     } else {
         echo "ALgo pasa con el SQL";
     }

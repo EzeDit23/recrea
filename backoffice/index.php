@@ -19,10 +19,10 @@
         <label for="">Datos Empresa</label><br>
         <input type="text" name="nombre" id="" placeholder="Nombre"><br>
         <label for="">Categoria </label><select name="categoria" id="">
-            <option value="">Comida</option>
-            <option value="">Indumentaria</option>
-            <option value="">Belleza</option>
-            <option value="">otros</option>
+            <option value="Comida">Comida</option>
+            <option value="Indumentaria">Indumentaria</option>
+            <option value="Belleza">Belleza</option>
+            <option value="Otros">Otros</option>
         </select><br>
         <label for="">Localidad </label><select name="localidad" id="">
             <option value="">Villa Bosch</option>
@@ -40,13 +40,10 @@
         <input type="text" name="instagram" id="" placeholder="Instagram"><br>
         <input type="text" name="twitter" id="" placeholder="Twitter"><br><br>
 
-        <label for="">Imagen</label>
-        <div class="form-group">
-          <div class="col-sm-8">
-            <input type="file" class="form-control" id="image" name="image" multiple>
-          </div><br>
-          <button name="submit" class="btn btn-primary">Registrar Marca</button>
-        </div>
+        <label for="imagen">Imagen:</label> 
+        <input id="imagen" name="imagen" size="30" type="file" /><br><br>
+        <input type="submit" value="Registrarse" />
+            
     </form>
     
 </body>

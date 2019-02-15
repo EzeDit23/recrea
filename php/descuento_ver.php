@@ -1,31 +1,61 @@
 <?php
     
     include("conexion.php");
-   
+    include("sesion.php");
 
-    $select="SELECT * FROM vecinos WHERE id=1";
+    $select="SELECT * FROM vecinos WHERE id=$id_vecino";
 
     $select_query = mysqli_query($conexion, $select);
     
     while($dato = mysqli_fetch_array($select_query)) {
-        $numero = $dato['numero'];
+        $cant_des = $dato['cant_des'];
     }
-    if ($numero == 0){
+    if ($cant_des == 0){
         echo "no tenes mas promos";
     } else {
         $alpha = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         $code = "";
         $longitud=6;
+
         for($i=0;$i<$longitud;$i++){
             $code .= $alpha[rand(0, strlen($alpha)-1)];
         }
 
-        $numerorest = $numero -1;
-        $restar = "UPDATE vecinos SET numero=$numerorest WHERE id=1";
+        $cant_desRest = $cant_des -1;
+        $restar = "UPDATE vecinos SET cant_des=$cant_desRest WHERE id=$id_vecino"; 
         $restar_query = mysqli_query($conexion, $restar);
 
-
+        if($restar_query == true){
+            echo "SE RESTO";
+        } else {
+            echo "ALgo pasa con el SQL";
+        }
         $numganador=rand(1,3);
-        header("Location: ../ganador.php?numganador=$numganador&code=$code");
+        
+        /*GUARDAR CUPON*/
+       
+        
+        $selectDes="SELECT * FROM descuentos WHERE id_descuento=$numganador";
+        $select_queryDes = mysqli_query($conexion, $selectDes);
+
+        while($dato = mysqli_fetch_array($select_queryDes)) {
+            $id_descuento = $dato['id_descuento'];
+
+        }
+
+       
+        $insertCup="INSERT INTO `cupones` (`id_cupon`, `codigo`, `id_vecino`, `id_descuento`) 
+        VALUES (null, '$code', '$id_vecino', '$id_descuento');";
+
+        $query_insertCup = mysqli_query($conexion, $insertCup);
+
+        if($query_insertCup == true){
+            echo "se guardo el cupon de 10";
+        } else {
+            echo "ALgo pasa con el SQL";
+        }
+
+       
+       header("Location: ../ganador.php?numganador=$numganador&code=$code");
     }
 ?>

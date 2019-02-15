@@ -14,7 +14,7 @@
 			   WHERE
                email = '$email'
 				AND
-				clave   = '$clave'
+				clave = '$clave'
 			  ";
 	
 	// 4° Ejecutar la query

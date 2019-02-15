@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-02-2019 a las 21:48:27
+-- Tiempo de generación: 15-02-2019 a las 22:07:48
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.1
 
@@ -41,6 +41,29 @@ CREATE TABLE `avisos` (
 
 INSERT INTO `avisos` (`id_aviso`, `empresa`, `categoria`, `link`) VALUES
 (1, 'Dafiti', 'Indumentaria', 'nosesabe');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cupones`
+--
+
+CREATE TABLE `cupones` (
+  `id_cupon` int(11) NOT NULL,
+  `codigo` varchar(250) NOT NULL,
+  `id_vecino` int(11) NOT NULL,
+  `id_descuento` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cupones`
+--
+
+INSERT INTO `cupones` (`id_cupon`, `codigo`, `id_vecino`, `id_descuento`) VALUES
+(55, '2PXK0R', 1, 3),
+(56, '78XWG7', 1, 1),
+(57, 'F0IVQ3', 1, 1),
+(58, 'YBUQR4', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -119,7 +142,10 @@ INSERT INTO `empresas` (`id_empresa`, `nombre`, `categoria`, `status`, `estado`,
 (13, 'Dafiti', 'Comida', 'si', 'en proceso', 'ariel@prueba.com', '123', '', 'en proceso', '323123', 'piso3', 'no tiene', 'no tiene', 'no tiene', 'no tiene', NULL, '', '', '', NULL),
 (14, '', 'Comida', 'si', 'en proceso', 'ariel@prueba.com', '123', '', 'en proceso', '', '', '', '', '', '', NULL, '', '', '', NULL),
 (15, 'marcos', 'Comida', 'si', 'en proceso', 'ariel@prueba.com', '123', '', 'en proceso', '32312', 'dsdsad', 'no tiene', 'no tiene', 'no tiene', 'no tiene', NULL, '', '', '', NULL),
-(16, 'marcos', 'Comida', 'si', 'en proceso', 'ariel@prueba.com', '123', '', 'en proceso', '32312', 'dsdsad', 'no tiene', 'no tiene', 'no tiene', 'no tiene', NULL, '', '', '', NULL);
+(16, 'marcos', 'Comida', 'si', 'en proceso', 'ariel@prueba.com', '123', '', 'en proceso', '32312', 'dsdsad', 'no tiene', 'no tiene', 'no tiene', 'no tiene', NULL, '', '', '', NULL),
+(17, 'marcos', 'Comida', 'si', 'en proceso', 'ariel@prueba.com', '123', '', 'en proceso', '32312', 'dsdsad', 'no tiene', 'no tiene', 'no tiene', 'no tiene', NULL, '', '', '', NULL),
+(18, 'Test', 'Otros', 'si', 'en proceso', 'test@primero.com', '555', '', 'en proceso', '32312', 'piso3', 'no tiene', 'no tiene', 'no tiene', 'no tiene', NULL, '', '', '', NULL),
+(19, 'Bastet', 'Belleza', 'si', 'en proceso', 'test@segundo.com', '555', 'villa bosch', 'siempre viva', '32312', 'piso3', 'no tiene', 'no tiene', 'no tiene', 'no tiene', NULL, '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -143,7 +169,9 @@ CREATE TABLE `vecinos` (
 --
 
 INSERT INTO `vecinos` (`id`, `cant_des`, `email`, `clave`, `nombre`, `apellido`, `direccion`, `numero`) VALUES
-(1, 10, 'nada@gmail.com', '7777', 'Marcos', 'Dituri', 'campo de mayo 6249', 4);
+(1, 4, 'nada@gmail.com', '7777', 'Marcos', 'Dituri', 'campo de mayo 6249', 0),
+(2, 50, 'test@user.com', '555', 'Gonza', 'Lala', 'No se aun', 11454),
+(3, 33, 'orotest@user.com', '555', 'otrotest', 'po', 'No se aun', 11454);
 
 --
 -- Índices para tablas volcadas
@@ -154,6 +182,14 @@ INSERT INTO `vecinos` (`id`, `cant_des`, `email`, `clave`, `nombre`, `apellido`,
 --
 ALTER TABLE `avisos`
   ADD PRIMARY KEY (`id_aviso`);
+
+--
+-- Indices de la tabla `cupones`
+--
+ALTER TABLE `cupones`
+  ADD PRIMARY KEY (`id_cupon`),
+  ADD KEY `id_vecino` (`id_vecino`),
+  ADD KEY `id_descuento` (`id_descuento`);
 
 --
 -- Indices de la tabla `descuentos`
@@ -184,6 +220,12 @@ ALTER TABLE `avisos`
   MODIFY `id_aviso` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `cupones`
+--
+ALTER TABLE `cupones`
+  MODIFY `id_cupon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+
+--
 -- AUTO_INCREMENT de la tabla `descuentos`
 --
 ALTER TABLE `descuentos`
@@ -193,13 +235,24 @@ ALTER TABLE `descuentos`
 -- AUTO_INCREMENT de la tabla `empresas`
 --
 ALTER TABLE `empresas`
-  MODIFY `id_empresa` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_empresa` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `vecinos`
 --
 ALTER TABLE `vecinos`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `cupones`
+--
+ALTER TABLE `cupones`
+  ADD CONSTRAINT `cupones_ibfk_1` FOREIGN KEY (`id_vecino`) REFERENCES `vecinos` (`id`),
+  ADD CONSTRAINT `cupones_ibfk_2` FOREIGN KEY (`id_descuento`) REFERENCES `descuentos` (`id_descuento`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

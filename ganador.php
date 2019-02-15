@@ -13,8 +13,10 @@ echo "el coidgo es: $code";
 
 /*CONSULTAMOS LA BASE DE DATOS*/
 include("php/conexion.php");
+include("php/sesion.php");
+
 $selectDes="SELECT * FROM descuentos WHERE id_descuento=$numganador";
-$selectVec="SELECT * FROM vecinos WHERE id=1";
+$selectVec="SELECT * FROM vecinos WHERE id=$id_vecino;";
 
 $select_queryDes = mysqli_query($conexion, $selectDes);
 $select_queryVec = mysqli_query($conexion, $selectVec);
@@ -39,13 +41,13 @@ while($dato = mysqli_fetch_array($select_queryDes)) {
 }
 
 while($dato = mysqli_fetch_array($select_queryVec)) {
-    $numero = $dato['numero'];
-    if ($numero == 0){
+    $cant_des = $dato['cant_des'];
+    if ($cant_des == 0){
         echo "no tenes mas promos";
     } else {
-        echo "te quedan $numero promos mas este mes";
-
-    
+        echo "te quedan $cant_des promos mas este mes<br>";
     }
-
 }
+?>
+
+<a href="ver_promos.php">MIS PROMOS</a>

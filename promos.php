@@ -1,9 +1,19 @@
 <?php
  include("php/conexion.php");
+ include("php/sesion.php");
  $id_select = 1;
- /*avisos*/
- 
+
+     
+ /*USUARIOS*/
+ $selectUser = "SELECT * FROM vecinos WHERE id = $id_vecino";
+ $selectUser_query = mysqli_query($conexion, $selectUser);
+
+ while($dato = mysqli_fetch_array($selectUser_query)) {
+    $nombre = $dato['nombre'];
+    $apellido = $dato['apellido'];
+    }
     
+/*AVISOS*/
  $select = "SELECT * FROM avisos WHERE id_aviso = $id_select";
  $select_query = mysqli_query($conexion, $select);
 
@@ -43,6 +53,8 @@
 	    });
     </script>
     <?php
+    echo"<h2>HOLA! $nombre</h2>";
+    echo"<h3>$apellido</h3><br>";
     echo"<h2>$categoria</h2>";
     echo"<h3>$empresa</h3>";
     ?>
@@ -59,6 +71,7 @@
     </script>
     <button id="btn-play" onclick="reproducir()">VER PUBLICIDAD</button>
 
+    <a href="php/cerrar.php">SALIR</a>
  
 </body>
 </html>

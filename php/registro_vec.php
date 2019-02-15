@@ -20,7 +20,7 @@
 	
 	// 4. Verificar si funcionó
 	if($insertar_ej == true){
-        header('Location: gracias.html');
+        header('Location: ../promos.php');
 	} else {
 		echo "ALgo pasa con el SQL";
 	}

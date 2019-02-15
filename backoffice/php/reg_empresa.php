@@ -25,14 +25,9 @@
    $insertar = "INSERT INTO empresas
     (id_empresa,nombre,categoria,status,estado,email,clave,localidad,direccion,numero,comentario,sitioweb,face,instagram,twitter)
     VALUES
-    (null,'$nombre','$categoria','$status','$estado','$email','$clave','$localidad','$estado','$numero','$comentario','$sitioweb','$facebook','$instagram','$twitter')";
+    (null,'$nombre','$categoria','$status','$estado','$email','$clave','$localidad','$direccion','$numero','$comentario','$sitioweb','$facebook','$instagram','$twitter')";
 
-/*
-    $insertar = "INSERT INTO empresas
-    (id_empresa,status,estado,nombre,email,clave,categoria,localidad,direccion,numero,comentario,sitioweb,facebook,instagram,twitter) 
-    VALUES
-    (NULL,'$status','$estado','$nombre','$email','$clave','$categoria','$localidad','$direccion','$numero','$comentario','$sitioweb','$facebook','$instagram','$twitter')";
-*/
+
     // 3. Ejecutar la query
     $insertar_ej = mysqli_query(
                 $conexion, $insertar

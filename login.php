@@ -14,6 +14,10 @@
     <title>BackOffice - Medife</title>
 </head>
 <body>
+<?php
+include("components/menu.php");
+?>
+
     <h1>VECINOS</h1>
     <form action="php/confirm_login.php" method="POST">
         <input type="text" name="email" id="" placeholder="Email"><br>

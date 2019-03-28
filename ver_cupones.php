@@ -11,7 +11,6 @@ include("php/sesion.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
@@ -97,7 +96,7 @@ include("components/menu.php");
                         echo "<span class='tit-codigo'><b>CODIGO:</b> $codigo</span><br>";
                         echo "<div class='linea-cupon'></div>";
                         echo "<span class='nombre-cupon'>$nombre<br>$empresa</span><br>";
-                        echo "<span>$porcentaje% de descuento</span><br>";
+                        echo "<p class='porcentaje-cupon'>$porcentaje% de descuento</p>";
                         echo "<span class='cont-estado' id='$estadoCss'><div class='circulo-estado'></div> $estado</span>";
                     echo "</div>";
                     echo "</a>";

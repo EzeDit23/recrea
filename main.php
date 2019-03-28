@@ -38,17 +38,13 @@ include("components/menu.php");
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <img src="img/main/main-degrade.png" class="main-degrade" alt="">
+                            <img src="img/main/2.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-md-block">
+                                <div class="main-categ"><p>Belleza</p></div>
+                                <p class="main-tit">CORTE DE PELO!</p>
+                                <a href="https://goo.gl/maps/RDpMB1BCVu12" target="_blank"><p class="main-geo"><i class="fas fa-map-marker-alt"></i> Villa Bosch</p></a>
+                                <p class="main-copy">Actualiza tu look con el mejor estilo, hoy mismo!</p>
                             </div>
                         </div>
                     </div>
@@ -69,8 +65,8 @@ include("components/menu.php");
             </div>
 
             <div class="col-md-12 sinNada cont-btn-gral">
-                <div class="btn-gral">
-                    <a href="">GENERAR CUPON</a>
+                <div class="btn-gral btn-padd-b">
+                    <a href="promos.php">GENERAR CUPON</a>
                 </div>
                 <a class="link-gral" href="" id="btn-miscupones">MIS CUPONES</a>
             </div>
@@ -81,5 +77,8 @@ include("components/menu.php");
     </div>
 
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

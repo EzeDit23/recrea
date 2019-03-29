@@ -41,30 +41,30 @@ $select_queryVec = mysqli_query($conexion, $selectVec);
             </div>
         </div>
 
-        <div class="col-12 contenedor sinNada">
-        <div class="toda-tarjeta">
-            <div class="main-cupon">
-                <span>CUPON</span><span style="font-weight:normal;"><?php echo $code;?></span>
-            </div class="toda-tarjeta">
-                <div class="tarjeta">
-                    <div class="contenido-cupon">
+        <div class="row sinNada cont-tarjeta">
+            <div class="col-12 contenedor sinNada">
+                <div class="toda-tarjeta">
+                    <div class="main-cupon">
+                        <span>CUPON</span><span style="font-weight:normal;"><?php echo $code;?></span>
+                    </div>
+                    <div class="toda-tarjeta">
+                        <div class="tarjeta">
+                            <div class="contenido-cupon">
 
     
 <?php
 while($dato = mysqli_fetch_array($select_queryDes)) {
     $id_descuento = $dato['id_descuento'];
+    $porcentaje = $dato['porcentaje'];
     $codigo = $dato['codigo'];
     $nombre = $dato['nombre'];
-    $porcentaje = $dato['porcentaje'];
     $empresa = $dato['empresa'];
     $categoria = $dato['categoria'];
 
-    
     echo "<h1 class='tit-cupon'>$nombre </h1>";   
-    echo "<h1 class='code-cupon'>$code </h1>";
-  
     echo "<h2 class='porc-cupon'>$porcentaje% de descuento</h2>";
-    echo "<h2 class='empresa-cupon'>$empresa </h2>";
+    echo "<h1 class='code-cupon'>$code </h1>";
+    echo "<h2 class='prom-empresa'>$empresa </h2>";
 
     while($dato = mysqli_fetch_array($select_queryVec)) {
             $nombreVec = $dato['nombre'];
@@ -79,41 +79,49 @@ while($dato = mysqli_fetch_array($select_queryDes)) {
         }
     }
     ?>
+                        </div>
 
-    <div class="cont-datos">
-        <div class="items-datos">
-            <span class="item-tit-datos">Nombre</span>
-            <span><?php echo $nombreVec;?></span>
-        </div>
-        <div class="items-datos">
-            <span class="item-tit-datos">Apellido</span>
-            <span><?php echo $apellido;?></span>
-        </div>
-        <div class="items-datos">
-            <span class="item-tit-datos">DNI</span>
-            <span><?php echo $nombreVec;?></span>
-        </div>
-    </div>
-    
+                        <div class="cont-datos">
+                            <div class="items-datos">
+                                <span class="item-tit-datos">Nombre</span>
+                                <span><?php echo $nombreVec;?></span>
+                            </div>
+                            <div class="items-datos">
+                                <span class="item-tit-datos">Apellido</span>
+                                <span><?php echo $apellido;?></span>
+                            </div>
+                            <div class="items-datos">
+                                <span class="item-tit-datos">DNI</span>
+                                <span><?php echo $nombreVec;?></span>
+                            </div>
+                        </div>
+                
 
 <?php
 }
 
 
 ?>
+                    
+                
+                </div>
             </div>
-            </div>
-            </div>
-            <?php
-            echo $teQuedan;
-            ?>
-            <a href="ver_cupones.php" class="btn-grl">MIS CUPONES</a>
         </div>
-        
-
-    
+        <?php
+        echo $teQuedan;
+        ?>
+    </div> 
+  
 </div>
 
+        <div class="col-md-12 sinNada cont-btn-gral">
+            <div class="btn-gral">
+                <a href="ver_cupones.php">MIS CUPONES</a>
+            </div>
+        </div>
+ 
+   
+</div>
 
 </body>
 

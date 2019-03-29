@@ -64,7 +64,7 @@ while($dato = mysqli_fetch_array($select_queryDes)) {
     echo "<h1 class='code-cupon'>$code </h1>";
   
     echo "<h2 class='porc-cupon'>$porcentaje% de descuento</h2>";
-    echo "<h2>$empresa </h2>";
+    echo "<h2 class='empresa-cupon'>$empresa </h2>";
 
     while($dato = mysqli_fetch_array($select_queryVec)) {
             $nombreVec = $dato['nombre'];

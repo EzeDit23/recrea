@@ -45,7 +45,7 @@
 	// echo "El ID del usuario es ";
 	// echo $_SESSION['id'];
 	// Redirección
-	header("location: ../promos.php");
+	header("location: ../main.php");
 	
 		} else {
 			header("location: ../errorlogin.php");

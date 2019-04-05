@@ -6,7 +6,19 @@ a:hover{
     padding: 0; 
     margin: 0;
 }
-
+/*Menu*/
+.navbar{
+    background-color: #f7c83c!important;
+}
+#menu-ticket{
+    transform: rotate(137deg);
+    color: white;
+    font-size: 29px;
+}
+#menu-hambur{
+    color: white;
+    font-size: 29px;
+}
 /*ganador*/
 
 .fondoGanador{
@@ -15,7 +27,7 @@ a:hover{
     justify-content: space-between;
     flex-direction: column;
     background: #f7c83c;
-    height: 100vh;
+    height: 92vh;
     width: 100%;
 }
 
@@ -245,7 +257,7 @@ a:hover{
     margin: auto;
     width: 90%!important;
     width: 100vw;
-    height: 100vh;
+    height: 92vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -289,6 +301,7 @@ a:hover{
 /*Main*/
 
 .main{
+    margin-top: 6.7vh!important;
     background-color: #f7c83c;
     margin: auto;
 }
@@ -296,7 +309,7 @@ a:hover{
     margin: auto;
     width: 100%!important;
     width: 100vw;
-    height: 100vh;
+    height: 92vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -418,7 +431,7 @@ a:hover{
     margin: auto;
     width: 100%!important;
     width: 100vw;
-    height: 100vh;
+    height: 92vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

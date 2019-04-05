@@ -1,27 +1,42 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <i id="menu-hambur" class="fas fa-bars"></i>
   </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#">RECREA</a>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-    <li class="nav-item active">
-        <a class="nav-link" href="./index.php">Inicio <span class="sr-only">(current)</span></a>
+  <a href="">RECREA</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <i id="menu-ticket" class="fas fa-ticket-alt"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./promos.php">Jugar <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Features</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="./ver_cupones.php">Mis Cupones(<?php echo "$row_cnt"; ?>)</a>
+        <a class="nav-link" href="#">Pricing</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-        <a class="nav-link disabled" href="#"><i class="fas fa-user-circle"></i>
-    <?php
-    echo "$nombre";
-    ?>
+    <span class="navbar-text">
+      Navbar text with an inline element
+    </span>
+  </div>
 
-        </a>
-    </form>
+  <div class="collapse navbar-collapse" id="navbarMenu">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">MENU <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      Navbar text with an inline element
+    </span>
   </div>
 </nav>

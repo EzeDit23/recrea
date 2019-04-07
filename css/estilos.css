@@ -8,6 +8,9 @@ a:hover{
 }
 /*Menu*/
 .navbar{
+    -webkit-box-shadow: 0px -1px 25px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 25px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 25px -8px rgba(0,0,0,0.75);
     background-color: #f7c83c!important;
 }
 #menu-ticket{
@@ -19,9 +22,14 @@ a:hover{
     color: white;
     font-size: 29px;
 }
+.navbar-light .navbar-toggler {
+    color: #86498c;
+    border-color:#daa000;
+}
 /*ganador*/
 
 .fondoGanador{
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,7 +42,14 @@ a:hover{
 .cont-tarjeta{
     width: 90%;
 }
+.cont-vercupones{
+    background-color: #f7c83c;
+    min-height: 92vh;
+    height: 100%;
+}
+
 .fondoVerCupon{
+    margin-top: 13.9vh!important;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -42,6 +57,38 @@ a:hover{
     height: 100%;
     width: 100%;
 }
+.cont-switch-vc {
+    display: flex;
+    align-items: center;
+    background-color: #f7c83c;
+    width: 100%;
+    height: 7.5vh;
+    z-index: 999;
+    top: 6.7vh!important;
+    position: fixed;
+}
+.cont-switch-vc .active{
+    background-color: #86498c;
+}
+.cont-switch-vc .active h2{
+    background-color: #86498c;
+    color: #f7c83c;
+}
+.cont-switch-vc .inactive{
+    border: 1.4px solid #86498c;
+}
+.btn-swich{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-swich h2{
+    color: #86498c;
+    text-align: center;
+    font-size: 20px;
+}
+
 .contenedor{
     display: flex;
     flex-direction: column;
@@ -129,6 +176,7 @@ a:hover{
 }
 
 .contenido-cupon {
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,7 +226,15 @@ a:hover{
 /*MIS CUPONES*/
 
 .cupon-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
     background-color: white;
+    height: 230px;
     margin: 10px;
     padding: 20px;
 }
@@ -192,7 +248,6 @@ a:hover{
 }
 .porcentaje-cupon{
     margin-bottom: 0px!important;
-    margin-top: 5px!important;
     border-radius: 8px;
     border: 1px solid #86498c;
     padding: 3px 10px;
@@ -200,7 +255,10 @@ a:hover{
     color: #86498c!important;
 }
 
-.linea-cupon{
+.linea-cupon {
+    margin-top: 6px;
+    margin-bottom: 7px;
+    padding-bottom: 1px;
     background-color: #f7c83c;
     height: 2px;
     width: 100px;
@@ -402,18 +460,17 @@ a:hover{
     justify-content: center;
     align-items: center;
     background-color: #86498c;
-    height: 40px;;
+    height: 50px;;
 }
 .btn-gral a{
     color: white;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 24px;
 }
 .link-gral{
     padding-top: 5px!important;
     text-align: center;
     color: #86498c;
-    font-size: 20px;
+    font-size: 24px;
     margin: auto;
     font-weight: bold;
 }
@@ -424,6 +481,7 @@ a:hover{
 /*Promos*/
 
 .promo{
+    margin-top: 6.7vh!important;
     background-color: #f7c83c;
     margin: auto;
 }
@@ -468,8 +526,8 @@ a:hover{
     background-color: #86498c;
     border: none;
     color: white;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: normal;
 }
 .btn-gral-alt{
     border-radius: 8px;
@@ -477,7 +535,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     border: 2px solid #86498c;
-    height: 40px;
+    height: 50px;
 }
 .btn-gral-alt a{
     color: #86498c;

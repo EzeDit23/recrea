@@ -97,7 +97,7 @@ include("components/menu.php");
                         $nombre = $dato['nombre'];
                         $porcentaje = $dato['porcentaje'];
                         $empresa = $dato['empresa'];
-                            echo "<span class='tit-codigo'><b>CODIGO:</b> $codigo</span>";
+                            echo "<span class='tit-codigo'><b>CODIGO: $codigo</b></span>";
                             echo "<div class='linea-cupon'></div>";
                             echo "<span class='nombre-cupon'>$nombre<br>$empresa</span><br>";
                             echo "<p class='porcentaje-cupon'>$porcentaje% de descuento</p>";

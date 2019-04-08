@@ -88,9 +88,9 @@ include("php/sesion.php");
                     <a href="#none">ESPERE...</a>
                 </div>
                 
-                <div class="btn-gral" id="btn-verPromo" style="display: none;">
-                    <a href="php/descuento_ver.php">CONTINUAR</a>
-                </div>
+                <a href="php/descuento_ver.php" class="btn-gral" id="btn-verPromo" style="display: none;">
+                    <div>CONTINUAR</div>
+                </a>
                 
                 
                 <script type="text/javascript">

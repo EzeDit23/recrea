@@ -65,10 +65,10 @@ include("components/menu.php");
             </div>
 
             <div class="col-md-12 sinNada cont-btn-gral">
-                <div class="btn-gral btn-padd-b">
-                    <a href="promos.php">GENERAR CUPON</a>
-                </div>
-                <a class="link-gral" href="" id="btn-miscupones">MIS CUPONES</a>
+                <a href="promos.php" class="btn-gral btn-padd-b">
+                    <div>GENERAR CUPON</div>
+                </a>
+                <a class="link-gral" href="ver_cupones_active.php" id="btn-miscupones">MIS CUPONES</a>
             </div>
 
         </div>

@@ -115,9 +115,9 @@ while($dato = mysqli_fetch_array($select_queryDes)) {
 </div>
 
         <div class="col-md-12 sinNada cont-btn-gral">
-            <div class="btn-gral">
-                <a href="ver_cupones.php">MIS CUPONES</a>
-            </div>
+            <a href="ver_cupones_active.php" class="btn-gral">
+                <div>MIS CUPONES</div>
+            </a>
         </div>
  
    

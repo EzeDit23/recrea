@@ -56,8 +56,8 @@
         }
 
        
-        $insertCup="INSERT INTO `cupones` (`id_cupon`, `codigo`, `id_vecino`, `id_descuento`) 
-        VALUES (null, '$code', '$id_vecino', '$id_descuento');";
+        $insertCup="INSERT INTO `cupones` (`id_cupon`, `codigo`, `id_vecino`, `id_descuento`, `estado`) 
+        VALUES (null, '$code', '$id_vecino', '$id_descuento','si');";
 
         $query_insertCup = mysqli_query($conexion, $insertCup);
 

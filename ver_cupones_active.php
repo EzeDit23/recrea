@@ -26,7 +26,7 @@ include("components/menu.php");
 
 <?php
     /*datos de cupon*/
-    $mostrar = "SELECT * FROM `cupones` WHERE id_vecino=$id_vecino and estado='si'";
+    $mostrar = "SELECT * FROM `cupones` WHERE id_vecino=$id_vecino and estado='si' ORDER BY id_cupon desc";
     // 3. Ejecutar la query
     $mostrar_ej = mysqli_query(
                 $conexion, $mostrar

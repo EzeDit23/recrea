@@ -48,13 +48,15 @@ button:focus{
 /*ganador*/
 
 .fondoGanador{
-    margin-top: 6.7vh!important;
+    height: 100vh;
+    padding-top:12%;
+    background-color: #f7c83c;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    background: #f7c83c;
-    height: 92vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -327,6 +329,8 @@ button:focus{
 /*Login*/
 
 .Login{
+    height: 100vh;
+    padding-top: 12%;
     background-color: #f7c83c;
     margin: auto;
 }
@@ -378,7 +382,8 @@ button:focus{
 /*Main*/
 
 .main{
-    margin-top: 6.7vh!important;
+    height: 100vh;
+    padding-top:12%;
     background-color: #f7c83c;
     margin: auto;
 }
@@ -500,7 +505,8 @@ button:focus{
 /*Promos*/
 
 .promo{
-    margin-top: 6.7vh!important;
+    height: 100vh;
+    padding-top:12%;
     background-color: #f7c83c;
     margin: auto;
 }
